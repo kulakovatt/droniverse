@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://example.com/droniverse-logo.png" alt="Droniverse Logo">
+  <img src="public/images/Logo.png" alt="Droniverse Logo">
   <br>
   Добро пожаловать в Droniverse - Интернет-магазин дронов на Laravel
   <br>
