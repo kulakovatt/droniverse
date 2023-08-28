@@ -1,0 +1,722 @@
+@import "constants";
+
+body{
+  background-color: #F2F2F5;
+}
+
+@include section();
+
+.banner_container{
+  display: flex;
+  justify-content: center;
+
+  .banner{
+    max-width: 90%;
+    min-width: 90%;
+    margin: auto 0;
+    padding: 25px 0;
+    position: relative;
+    min-height: 480px;
+
+    @media (max-width: 1385px)
+    {
+      min-height: 400px;
+    }
+    @media (max-width: 1200px)
+    {
+      min-height: 350px;
+    }
+    @media (max-width: 1030px)
+    {
+      min-height: 270px;
+    }
+    @media (max-width: 860px)
+    {
+      min-height: 240px;
+    }
+    @media (max-width: 750px)
+    {
+      min-height: 400px;
+    }
+    @media (max-width: 500px)
+    {
+      min-height: 350px;
+    }
+
+    .banner_info{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      width: 70%;
+      position: absolute;
+      z-index: 999;
+      bottom: 0;
+
+      @media (max-width: 1030px)
+      {
+        gap: 20px;
+      }
+      @media (max-width: 750px)
+      {
+        width: 100%;
+      }
+
+      h1{
+        @include h1();
+        font-size: 68px;
+
+        @media (max-width: 1385px)
+        {
+          font-size: 60px;
+        }
+        @media (max-width: 1224px)
+        {
+          font-size: 50px;
+        }
+        @media (max-width: 1030px)
+        {
+          font-size: 40px;
+        }
+        @media (max-width: 860px)
+        {
+          font-size: 30px;
+        }
+      }
+
+      .banner_text{
+        font-size: 20px;
+        color: $color-blue;
+        font-weight: 500;
+        max-width: 480px;
+        line-height: 24px;
+
+        @media (max-width: 1030px)
+        {
+          font-size: 16px;
+          line-height: 18px;
+          max-width: 380px;
+        }
+      }
+    }
+
+    .banner_img{
+      position: absolute;
+      z-index: -999;
+      width: 50vw;
+      right: 0;
+
+      @media (max-width: 750px)
+      {
+        width: 90vw;
+      }
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.peculiarities_container{
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 830px)
+  {
+    margin-top: 80px;
+  }
+
+  .peculiarities{
+    @include container ();
+    gap: 20px;
+
+    @media (max-width: 1000px)
+    {
+      flex-direction: column;
+    }
+
+
+
+    .block{
+      display: flex;
+      gap: 20px;
+      width: 50%;
+
+      &:first-child{
+        @media (max-width: 1000px)
+        {
+          flex-direction: row-reverse;
+        }
+        @media (max-width: 540px)
+        {
+          flex-direction: column-reverse;
+        }
+      }
+
+      @media (max-width: 1000px)
+      {
+        width: 100%;
+      }
+      @media (max-width: 540px)
+      {
+        flex-direction: column;
+      }
+
+      .h2_cont{
+        height: 250px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        height: 200px;
+
+        h2{
+          @include h2 ();
+          line-height: 36px;
+
+        }
+
+        @media (max-width: 1000px)
+        {
+          justify-content: flex-start;
+        }
+        @media (max-width: 1030px)
+        {
+          font-size: 30px;
+        }
+        @media (max-width: 860px)
+        {
+          font-size: 20px;
+          line-height: 26px;
+        }
+        @media (max-width: 540px)
+        {
+          width: 100%;
+          height: 50px;
+          justify-content: center;
+        }
+
+        .h2-none{
+          @media (max-width: 540px)
+          {
+            display: none;
+          }
+        }
+      }
+      .peculiarity_item{
+        background-color: $color-light-gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 260px;
+        width: 50%;
+        padding: 20px;
+        font-weight: 500;
+
+        @media (max-width: 1320px)
+        {
+          height: 290px;
+        }
+        @media (max-width: 1000px)
+        {
+          height: 200px;
+        }
+        @media (max-width: 690px)
+        {
+          height: 220px;
+        }
+        @media (max-width: 540px)
+        {
+          width: 100%;
+          height: 200px;
+        }
+
+        .title_cont{
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          color: $color-blue;
+
+          .title{
+            font-size: 16px;
+
+            span{
+              padding-right: 5px;
+              font-size: 14px;
+            }
+          }
+          .text{
+            font-size: 24px;
+
+            @media (max-width: 1292px)
+            {
+              font-size: 20px;
+            }
+
+            .br-none{
+              @media (max-width: 1480px)
+              {
+                display: none;
+              }
+            }
+          }
+        }
+        .hashtags_cont{
+          color: $color-dark-gray;
+          font-size: 18px;
+          text-transform: uppercase;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+
+          @media (max-width: 1320px)
+          {
+            gap: 6px;
+          }
+          @media (max-width: 1240px)
+          {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dji_container{
+  display: flex;
+  justify-content: flex-end;
+
+  @media (max-width: 730px)
+  {
+    justify-content: center;
+  }
+
+  .dji_dron{
+    max-width: 90%;
+    min-width: 90%;
+    margin: auto 0;
+    padding: 25px 0;
+    display: flex;
+    gap: 130px;
+
+    @media (max-width: 1400px)
+    {
+      gap: 100px;
+    }
+    @media (max-width: 915px)
+    {
+      gap: 60px;
+    }
+    @media (max-width: 730px)
+    {
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+
+    .dji_img{
+      display: flex;
+      width: 50%;
+      align-items: flex-end;
+
+      @media (max-width: 1100px)
+      {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+      @media (max-width: 730px)
+      {
+        width: 100%;
+      }
+
+      .img_hashtag{
+        padding: 8px 20px;
+        color: $color-dark;
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @media (max-width: 730px)
+        {
+          font-size: 18px;
+        }
+        @media (max-width: 540px)
+        {
+          font-size: 16px;
+        }
+      }
+
+      img{
+        max-width: 30vw;
+
+        @media (max-width: 1100px)
+        {
+          max-width: 40vw;
+        }
+        @media (max-width: 730px)
+        {
+          max-width: 100%;
+        }
+      }
+    }
+    .dji_dron_info{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      width: 50%;
+      color: $color-blue;
+
+      @media (max-width: 1000px)
+      {
+        gap: 20px;
+      }
+      @media (max-width: 730px)
+      {
+        width: 100%;
+      }
+
+      h1{
+        @include h1();
+      }
+      .dji_dron_text{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 22px;
+        width: 90%;
+
+        @media (max-width: 1000px)
+        {
+          font-size: 16px;
+          line-height: 18px;
+        }
+        @media (max-width: 730px)
+        {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.avata_container{
+  height: 50vw;
+  width: 100%;
+  background: url("./../images/dron-img-5.jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  .avata_dron{
+    @include container ();
+    justify-content: space-between;
+    color: $color-light-gray;
+    align-items: flex-end;
+    height: 100%;
+    padding-bottom: 80px;
+
+    @media (max-width: 1000px)
+    {
+      padding-bottom: 40px;
+    }
+
+    .avata_dron_text{
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 22px;
+      width: 46%;
+
+      @media (max-width: 1000px)
+      {
+        width: 60%;
+        font-size: 16px;
+        line-height: 18px;
+      }
+      @media (max-width: 670px)
+      {
+        display: none;
+      }
+
+    }
+
+    .img_hashtag{
+      padding: 8px 20px;
+      font-size: 22px;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      @media (max-width: 730px)
+      {
+        font-size: 18px;
+      }
+      @media (max-width: 670px)
+      {
+        display: none;
+      }
+    }
+  }
+}
+
+.avata-on670{
+  display: flex;
+  justify-content: center;
+
+  .avata_dron_text{
+    display: none;
+
+    @media (max-width: 670px)
+    {
+      display: flex;
+      width: 90%;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 500;
+      color: $color-dark;
+      padding-top: 20px;
+    }
+  }
+}
+
+.catalog_link_container{
+  display: flex;
+  justify-content: center;
+
+  .catalog_link{
+    @include container();
+    justify-content: space-between;
+
+    @media (max-width: 700px)
+    {
+      flex-direction: column-reverse;
+      gap: 0;
+    }
+
+    .column{
+      width: 30%;
+
+      @media (max-width: 1400px)
+      {
+        width: 40%;
+      }
+      @media (max-width: 700px)
+      {
+        width: 100%;
+
+      }
+
+      .catalog_items{
+        display: flex;
+        flex-direction: column;
+
+        img{
+          width: 100%;
+
+        }
+
+        .dron_info{
+          display: flex;
+          justify-content: space-between;
+          text-transform: uppercase;
+          font-weight: 500;
+          align-items: center;
+          padding: 10px;
+
+          @media (max-width: 1120px)
+          {
+            flex-direction: column;
+          }
+
+          .title{
+            font-size: 20px;
+            color: $color-dark;
+          }
+          .price{
+            font-size: 18px;
+            color: $color-blue;
+          }
+        }
+      }
+      .item_big{
+        width: 100%;
+       }
+    }
+
+    .column-1{
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+
+      @media (max-width: 1400px)
+      {
+        width: 50%;
+      }
+      @media (max-width: 1120px)
+      {
+        gap: 50px;
+      }
+      @media (max-width: 700px)
+      {
+        width: 100%;
+        gap: 30px;
+      }
+
+
+      .catalog_items-1{
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 550px)
+        {
+          flex-direction: column;
+        }
+
+        .item_little{
+          width: 49%;
+
+          @media (max-width: 550px)
+          {
+            width: 100%;
+          }
+        }
+      }
+
+      .button_cont{
+        display: flex;
+        justify-content: flex-end;
+
+        .button{
+          @include main-button;
+        }
+      }
+    }
+  }
+}
+
+.questions_container{
+  display: flex;
+  justify-content: center;
+
+  .questions{
+    @include container();
+
+    @media (max-width: 750px)
+    {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .h2_cont{
+      width: 40%;
+      display: flex;
+      justify-content: flex-start;
+
+      @media (max-width: 750px)
+      {
+        width: 100%;
+        justify-content: center;
+      }
+
+
+      h2{
+        @include h2();
+        line-height: 36px;
+      }
+
+      @media (max-width: 1030px)
+      {
+        font-size: 30px;
+      }
+      @media (max-width: 860px)
+      {
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      .h2-none{
+        @media (max-width: 750px)
+        {
+          display: none;
+        }
+      }
+    }
+
+    .triggers_cont{
+      width: 60%;
+
+      @media (max-width: 750px)
+      {
+        width: 100%;
+      }
+
+      .trigger{
+        width: 100%;
+        padding: 30px 0;
+        color: $color-blue;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid $color-blue;
+
+        @media (max-width: 750px)
+        {
+          padding: 30px 0 15px 0;
+        }
+
+        .trigger_title{
+          width: 100%;
+          font-size: 20px;
+          font-weight: 500;
+          text-transform: uppercase;
+          display: flex;
+          justify-content: space-between;
+          gap: 15px;
+
+          @media (max-width: 750px)
+          {
+            font-size: 18px;
+          }
+
+          .arrow{
+            display: block;
+            min-width: 30px;
+            height: 20px;
+
+            @media (max-width: 750px)
+            {
+              min-width: 20px;
+              height: 14px;
+            }
+          }
+          .arrow_off{
+            background: url("./../images/arrow-off.png");
+            background-size: cover;
+          }
+          .arrow_on{
+            background: url("./../images/arrow-on.png");
+            background-size: cover;
+          }
+
+          &:active{
+            color: $color-blue;
+          }
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        .subMenuTip-none{
+          display: none;
+
+        }
+
+        .subMenuTip-block{
+          display: block;
+          padding: 20px 0;
+
+        }
+      }
+
+
+    }
+  }
+}

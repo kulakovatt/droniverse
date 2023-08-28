@@ -1,0 +1,13 @@
+@import "constants";
+
+header{
+  display: flex;
+  justify-content: center;
+
+  .header_container{
+    max-width: 90%;
+    min-width: 90%;
+    margin: auto 0;
+    padding: 25px 0;
+  }
+}

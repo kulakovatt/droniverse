@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Fira Code", monospace;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+button {
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: #F2F2F5;
+}
+
+header .header_container .button {
+    color: #2E5CFE;
+    font-size: 18px;
+    text-transform: lowercase;
+    font-weight: 500;
+    padding: 6px 20px;
+    border-bottom: 2px solid #2E5CFE;
+    transition: all 0.2s;
+    border: none;
+}
+header .header_container .button:hover {
+    color: #3498db;
+    cursor: pointer;
+}
+
+.h2_cont {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: Unbounded;
+    color: #2E5CFE;
+    font-size: 30px;
+    font-weight: bold;
+}
+@media (max-width: 490px) {
+    .h2_cont {
+        font-size: 24px;
+    }
+}
+@media (max-width: 1230px) {
+    .h2_cont {
+        font-size: 24px;
+    }
+}
+
+.admin_container {
+    display: flex;
+    flex-direction: row;
+    padding: 60px 0 30px 0;
+    margin: 0 8%;
+    /* Style the buttons inside the tab */
+    /* Change background color of buttons on hover */
+    /* Create an active/current tablink class */
+    /* Style the tab content */
+}
+@media (max-width: 1000px) {
+    .admin_container {
+        margin: 0 3%;
+    }
+}
+.admin_container .tabs {
+    width: 100%;
+    float: none;
+    list-style: none;
+    padding: 0;
+}
+.admin_container .tab {
+    overflow: hidden;
+    border: 1px solid #dedede;
+    background-color: #f6f3f3;
+}
+.admin_container .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.admin_container .tab button:hover {
+    background-color: #f6f3f3;
+}
+.admin_container .tab button.active {
+    background-color: #dedede;
+}
+.admin_container .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #f6f3f3;
+    border-top: none;
+}
+@media (max-width: 1000px) {
+    .admin_container .tabcontent {
+        padding: 6px 0;
+    }
+}
+.admin_container .tabcontent .tab_cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 60px;
+}
+@media (max-width: 1000px) {
+    .admin_container .tabcontent .tab_cont {
+        padding: 30px 0;
+    }
+}
+.admin_container .tabcontent .tab_cont .item {
+    width: 100%;
+    background-color: #dedede;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.admin_container .tabcontent .tab_cont .item .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #1E1E1E;
+}
+.admin_container .tabcontent .tab_cont .item .row p {
+    font-size: 16px;
+    width: 10%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.admin_container .tabcontent .tab_cont .item .row input {
+    font-size: 16px;
+    width: 70%;
+    padding: 6px 9px;
+    outline: none;
+    border: none;
+}
+.admin_container .tabcontent .tab_cont .item .row .button {
+    margin-top: 15px;
+    color: #2E5CFE;
+    font-size: 18px;
+    text-transform: lowercase;
+    font-weight: 500;
+    padding: 6px 20px;
+    border-bottom: 2px solid #2E5CFE;
+    transition: all 0.2s;
+    border: none;
+}
+.admin_container .tabcontent .tab_cont .item .row .button:hover {
+    color: #3498db;
+    cursor: pointer;
+}
+
+.hello {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0 15px 0;
+    font-size: 18pt;
+    font-weight: bold;
+    color: #2E5CFE;
+}
+
+.hello .link {
+    color: black;
+    text-decoration-line: underline;
+}
+
+#edit, #edit-training {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#edit .row, #edit-training .row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#edit .row input, #edit .row textarea, #edit-training .row textarea , #edit-training .row input{
+    width: 70%;
+}
+#edit .row textarea, #edit-training .row textarea{
+    height: 100px;
+}
+#alert {
+    text-align: center;
+    list-style-type: none;
+}
+
+.template {
+    background-color: #dedede;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.row.checkbox {
+    display: flex;
+    align-items: center !important;
+}
+
+#edit .row #number, #edit-training .row #number, #edit .row #checkbox{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#edit .row #number input, #edit-training .row #number inputh {
+    width: 15%;
+}
+
+#edit .row #checkbox input {
+    width: 15px;
+    height: 15px;
+}
+
+.cancel {
+    background-color: #b70000;
+}
+
+.issued {
+    background-color: #008d0c;
+}
+
+.confirm {
+    background-color: #2E5CFE;
+}
+
+.cancel, .issued, .confirm {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 40px;
+}
+
+li {
+    list-style: none; /* Скрываем маркеры списка */
+}
+li::before {
+    content: '\25ba'; /* Добавляем маркер в шестнадцатеричном формате*/
+    padding-right: 5px; /* Расстояние от маркеров до текста */
+    color: #2E5CFE; /* Маркеры красного цвета */
+}
+
+.select2-results li::before {
+    content: none;
+}
+
+.alert-danger {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+/*# sourceMappingURL=admin_style.css.map */

@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Fira Code", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: unset;
+  border: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #F2F2F5;
+}
+header .header_container {
+  max-width: 100%;
+  min-width: 100%;
+  margin: auto 0;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .header_container a {
+    padding-left: 5%;
+}
+
+header .header_container .logo{
+    width: 251px;
+}
+
+header .header_container .menu_cont {
+    width: 60px;
+    height: 60px;
+    margin-right: 5%;
+}
+header .header_container .menu_cont .menu_button {
+    width: 100%;
+    height: 100%;
+    background-color: #2E5CFE;
+    position: relative;
+}
+header .header_container .menu_cont .menu_button .btn_el {
+    position: absolute;
+    height: 9px;
+    width: 9px;
+    background-color: #f6f3f3;
+    border-radius: 10px;
+}
+header .header_container .menu_cont .menu_button .btn_el-1 {
+    top: 12px;
+    left: 12px;
+    transition: 0.2s all;
+}
+header .header_container .menu_cont .menu_button .btn_el-2 {
+    top: 12px;
+    right: 12px;
+    transition: 0.4s all;
+}
+header .header_container .menu_cont .menu_button .btn_el-3 {
+    bottom: 12px;
+    left: 12px;
+    ransition: 0.4s all;
+}
+header .header_container .menu_cont .menu_button .btn_el-4 {
+    bottom: 12px;
+    right: 12px;
+    transition: 0.2s all;
+}
+header .header_container .menu_cont .menu_button:hover .btn_el-1 {
+    top: 12px;
+    left: 7px;
+    width: 46px;
+}
+header .header_container .menu_cont .menu_button:hover .btn_el-4 {
+    top: 36px;
+    right: 7px;
+    width: 46px;
+}
+header .header_container .menu_cont .menu_button:hover .btn_el-2 {
+    opacity: 0;
+}
+header .header_container .menu_cont .menu_button:hover .btn_el-3 {
+    opacity: 0;
+}
+header .header_container .menu_cont .menu_button-on .btn_el-1 {
+    top: 24px;
+    left: 5px;
+    width: 50px;
+    transform: rotate(45deg);
+}
+header .header_container .menu_cont .menu_button-on .btn_el-4 {
+    top: 24px;
+    right: 5px;
+    width: 50px;
+    transform: rotate(-45deg);
+}
+header .header_container .menu_cont .menu_button-on .btn_el-2 {
+    opacity: 0;
+}
+header .header_container .menu_cont .menu_button-on .btn_el-3 {
+    opacity: 0;
+}
+header .header_container .menu_cont .menu_button-on:hover .btn_el-1 {
+    top: 24px;
+    left: 5px;
+    width: 50px;
+    transform: rotate(45deg);
+}
+header .header_container .menu_cont .menu_button-on:hover .btn_el-4 {
+    top: 24px;
+    right: 5px;
+    width: 50px;
+    transform: rotate(-45deg);
+}
+header .header_container .menu_cont .menu_button-on:hover .btn_el-2 {
+    opacity: 0;
+}
+header .header_container .menu_cont .menu_button-on:hover .btn_el-3 {
+    opacity: 0;
+}
+header .header-fixed {
+    position: fixed;
+    background-color: #F2F2F5;
+    z-index: 999;
+}
+
+.dropdown_menu {
+    top: 110px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #F2F2F5;
+    height: 100%;
+    z-index: 999;
+    margin: 0;
+}
+.dropdown_menu .menu_container {
+    max-width: 60%;
+    min-width: 60%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media (max-width: 850px) {
+    .dropdown_menu .menu_container {
+        max-width: 90%;
+        min-width: 90%;
+        margin: 60px;
+    }
+}
+@media (max-width: 600px) {
+    .dropdown_menu .menu_container {
+        margin: 30px;
+    }
+}
+@media (max-width: 500px) {
+    .dropdown_menu .menu_container {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        gap: 40px;
+    }
+}
+.dropdown_menu .menu_container .menu_column {
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    justify-content: space-between;
+    color: #2E5CFE;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+@media (max-width: 850px) {
+    .dropdown_menu .menu_container .menu_column {
+        height: 280px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 500px) {
+    .dropdown_menu .menu_container .menu_column {
+        height: auto;
+        gap: 20px;
+    }
+}
+.dropdown_menu .menu_container .menu_column .menu_block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dropdown_menu .menu_container .menu_column .menu_block a {
+    color: #2E5CFE;
+}
+@media (max-width: 500px) {
+    .dropdown_menu .menu_container .menu_column .menu_block a {
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    .dropdown_menu .menu_container .menu_column .menu_block p {
+        text-align: center;
+    }
+}
+.dropdown_menu .menu_container .menu_column .menu_items {
+    font-size: 22px;
+}
+@media (max-width: 600px) {
+    .dropdown_menu .menu_container .menu_column .menu_items {
+        font-size: 18px;
+    }
+}
+
+.dropdown_menu-off {
+    display: none;
+}
+
+#btn_top {
+    display: block;
+    opacity: 0;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: 2px white solid;
+    outline: none;
+    background-color: #2E5CFE;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+#btn_top:hover {
+    background-color: white;
+    border: 2px #2E5CFE solid;
+    color: #2E5CFE;
+    font-weight: bold;
+}
+
+/*# sourceMappingURL=header_style.css.map */

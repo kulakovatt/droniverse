@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+$color-blue: #2E5CFE;
+$color-dark: #1E1E1E;
+
+$color-light-gray: #ECE9E9;
+$color-medium-gray: #D9D9D9;
+$color-dark-gray: #626262;
+$color-error: #D92828;
+
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Fira Code', monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button{
+  background-color: unset;
+  border: none;
+}
+
+@mixin section{
+    section{
+        margin-bottom: 130px;
+
+        @media (max-width: 830px)
+        {
+            margin-bottom: 40px;
+        }
+    }
+    .section_last{
+        margin: 0;
+    }
+}
+
+
+@mixin main-button {
+  color: $color-blue;
+  font-size: 18px;
+  text-transform: lowercase;
+  font-weight: 500;
+  padding: 6px 20px;
+  border-bottom: 2px solid $color-blue;
+}
+
+@mixin container (){
+    max-width: 90%;
+    min-width: 90%;
+    margin: auto 0;
+    padding: 25px 0;
+    display: flex;
+}
+
+@mixin h2 (){
+    font-family: Unbounded;
+    color: $color-blue;
+    font-size: 30px;
+    font-weight: bold;
+
+    @media (max-width: 490px)
+    {
+        font-size: 24px;
+    }
+}
+@mixin h1 (){
+    font-family: Unbounded;
+    color: $color-blue;
+    font-size: 60px;
+    font-weight: bold;
+
+    @media (max-width: 1000px)
+    {
+        font-size: 40px;
+    }
+}
+
+@mixin button_buy () {
+
+    a {
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-light-gray;
+        padding: 8px 20px;
+        background-color: $color-blue;
+        border: 2px solid $color-blue;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        @media (max-width: 1000px)
+        {
+            font-size: 16px;
+            padding: 6px 16px;
+        }
+    }
+    a:hover {
+        color: #3498db;
+    }
+    a::after {
+        content: "";
+        background: #F2F2F5;
+        position: absolute;
+        z-index: -1;
+        padding: 8px 20px;
+        display: block;
+    }
+    a[class^="slide"]::after {
+        transition: all 0.5s;
+    }
+    a[class^="slide"]:hover::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition: all 0.5s;
+    }
+    a.slide_from_left::after {
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: 100%;
+    }
+}
+
+
+@mixin item_catalog () {
+    .item{
+        display: flex;
+        flex-direction: column;
+        width: 32%;
+        background-color: white;
+
+        &-info{
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px;
+            background-color: white;
+            gap: 20px;
+
+            &-header{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                font-weight: 500;
+                text-transform: uppercase;
+
+                .title{
+                    color: $color-dark;
+                    font-size: 18px;
+                }
+                .price{
+                    color: $color-blue;
+                    font-size: 16px;
+                }
+            }
+
+            &-description{
+                font-size: 16px;
+                font-weight: 400;
+                color: $color-dark-gray;
+                text-transform: uppercase;
+            }
+        }
+
+        .button_container{
+            display: flex;
+            justify-content: flex-start;
+            padding: 30px 0;
+            background-color: white;
+
+            .button{
+                @include main-button;
+            }
+        }
+
+    }
+}
+
+

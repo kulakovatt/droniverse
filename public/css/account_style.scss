@@ -1,0 +1,201 @@
+@import "constants";
+body{
+  background-color: #F2F2F5;
+}
+
+.reg_aut_container{
+  display: flex;
+  justify-content: flex-end;
+  background: url("./../images/dron-img-3.jpg");
+  background-position-y: -200px;
+  background-position-x: -200px;
+  background-size: cover;
+
+  @media (max-width: 1380px)
+  {
+    background-position-y: 0;
+  }
+  @media (max-width: 1000px)
+  {
+    background:none;
+  }
+
+
+  .registration{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 200px 60px 60px;
+    background-color: #F2F2F5;
+
+    @media (max-width: 1000px)
+    {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0;
+    }
+    @media (max-width: 490px)
+    {
+      width: 92%;
+      padding: 20px 0;
+      gap: 26px;
+    }
+
+    h2{
+      @include h2 ();
+      text-align: center;
+    }
+
+    .inputs_container{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media (max-width: 490px)
+      {
+        gap: 14px;
+        align-items: center;
+      }
+
+      input{
+        width: 410px;
+        padding: 12px 10px;
+        background-color: #F2F2F5;
+        border: 2px solid $color-medium-gray;
+        outline: none;
+        font-size: 18px;
+        font-family: "Fira Code";
+
+        @media (max-width: 490px)
+        {
+          width: 86%;
+        }
+      }
+      input.input_error{
+        border: 2px solid $color-error;
+      }
+
+      .password_cont{
+        width: 410px;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid $color-medium-gray;
+        @media (max-width: 490px)
+        {
+          width: 86%;
+        }
+
+        input{
+          width: 360px;
+          border: none;
+        }
+
+        button{
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover{
+            cursor: pointer;
+          }
+
+          img{
+            width: 33px;
+          }
+        }
+      }
+
+      .password_strength{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        @media (max-width: 490px)
+        {
+          width: 86%;
+        }
+
+        .color_line_cont{
+          width: 410px;
+          height: 5px;
+          background: linear-gradient(90deg, rgba(215,129,129,1) 0%, rgba(213,214,173,1) 50%, rgba(164,232,141,1) 100%);
+          display: flex;
+          justify-content: flex-start;
+
+          @media (max-width: 490px)
+          {
+            width: 100%;
+          }
+
+          .color_line-red{
+            width: 20%;
+            background-color: rgba(237,11,11,1);
+            border-right: 5px solid $color-dark-gray;
+          }
+
+          .color_line-yellow{
+            width: 50%;
+            background: linear-gradient(90deg, rgba(237,11,11,1) 0%, rgba(221,224,63,1) 100%);
+            border-right: 5px solid $color-dark-gray;
+          }
+
+          .color_line-green{
+            width: 100%;
+            background: linear-gradient(90deg, rgba(237,11,11,1) 0%, rgba(221,224,63,1) 50%, rgb(65, 196, 24) 100%);
+            border-right: 5px solid $color-dark-gray;
+          }
+        }
+
+        p{
+          font-weight: 500;
+        }
+        p.message-red{
+          color: rgb(204, 61, 35);
+        }
+        p.message-yellow{
+          color: rgb(215, 173, 38);
+        }
+        p.message-green{
+          color: rgb(65, 196, 24);
+        }
+      }
+
+    }
+
+    .button_container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include button_buy ();
+    }
+
+    .button_signin_container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+
+      @media (max-width: 490px)
+      {
+        width: 86%;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      p{
+        color: $color-dark;
+        font-weight: 500;
+        font-size: 16px;
+      }
+      a{
+        @include  main-button ();
+        font-size: 16px;
+        padding: 6px 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,363 @@
+@import "constants";
+body{
+  background-color: #F2F2F5;
+}
+
+@include section();
+
+.item_container{
+  display: flex;
+  justify-content: center;
+
+  .item_info{
+    @include container ();
+
+    @media (max-width: 1000px)
+    {
+      align-items: center;
+    }
+    @media (max-width: 830px)
+    {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    h1.mob-on{
+      display: none;
+      @media (max-width: 830px)
+      {
+        display: inline;
+        @include h1 ();
+      }
+    }
+
+    .slider_container{
+      width: 50%;
+      padding: 0 60px;
+
+      @media (max-width: 1000px)
+      {
+        padding: 0 30px;
+      }
+      @media (max-width: 830px)
+      {
+        width: 90%;
+      }
+
+      .slick-track{
+        display: flex;
+        justify-content: center;
+      }
+
+      .slider-for{
+        .slick-slide{
+          width: 100% !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+
+          img{
+            max-width: 560px;
+            width: 100%;
+
+          }
+        }
+
+        .slick-current, .slick-center{
+          width: 100% !important;
+        }
+
+      }
+
+      .slider-nav{
+        .slick-slide{
+          width: 130px !important;
+          img{
+            max-width: 130px;
+            width: 100%;
+          }
+        }
+
+        .slick-current, .slick-center{
+          width: 130px !important;
+        }
+        .slick-current{
+          border: 2px solid $color-medium-gray;
+        }
+      }
+    }
+
+    .info{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+
+      @media (max-width: 830px)
+      {
+        width: 90%;
+        padding-top: 16px;
+      }
+
+      h1{
+        @include h1 ();
+      }
+      h1.mob-of{
+        @media (max-width: 830px)
+        {
+          display: none;
+        }
+      }
+      .description{
+        color: $color-dark-gray;
+        font-size: 16px;
+      }
+
+      .price_info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .price{
+          color: $color-dark;
+          font-size: 30px;
+          font-weight: 500;
+          text-transform: uppercase;
+
+          @media (max-width: 1000px)
+          {
+            font-size: 22px;
+          }
+        }
+
+        @include button_buy ();
+      }
+    }
+  }
+}
+
+.characteristics_container{
+  display: flex;
+  justify-content: center;
+
+  .characteristics_info{
+    @include container ();
+
+    @media only screen and (max-width: 980px){
+      flex-direction: column;
+    }
+
+    div{
+      width: 40%;
+      @media (max-width: 830px)
+      {
+        width: 100%;
+      }
+      h2{
+        @include h2();
+        @media (max-width: 830px)
+        {
+          text-align: center;
+        }
+      }
+    }
+
+    .characteristics{
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 32px 0;
+
+      @media only screen and (max-width: 980px){
+        width: 100%;
+      }
+
+      .characteristic_item{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-blue;
+        text-transform: uppercase;
+
+        .characteristic_name{
+          width: 40%;
+        }
+        .characteristic_value{
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+
+.equipments_container{
+  display: flex;
+  justify-content: center;
+
+  .equipments_info{
+    @include container ();
+    flex-direction: column;
+    gap: 60px;
+
+    div{
+      h2{
+        @include h2();
+        @media (max-width: 830px)
+        {
+          text-align: center;
+        }
+      }
+    }
+
+    ////////
+
+    .u-repeater-1 {
+      grid-template-columns: repeat(4, calc(25% - 7.5px));
+      grid-gap: 10px;
+
+      @media (max-width: 1215px)
+      {
+        grid-template-columns: repeat(3, calc(33% - 5px));
+      }
+      @media (max-width: 920px)
+      {
+        grid-template-columns: repeat(2, calc(50% - 5px));
+      }
+      @media (max-width: 620px)
+      {
+        grid-template-columns: repeat(1, 100%);
+      }
+    }
+    .u-repeater {
+      display: grid;
+    }
+    .u-repeater {
+      /* flex-grow: 1; */
+      flex-shrink: 1;
+      flex-basis: auto;
+    }
+
+    ///////
+
+
+
+        .equipment_item {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+
+
+          @media (max-width: 620px)
+          {
+            justify-content: center;
+            align-items: center;
+          }
+
+          .item_img {
+            width: 270px;
+            background-color: $color-light-gray;
+            display: flex;
+            @media (max-width: 1215px)
+            {
+              width: 100%;
+              justify-content: center;
+            }
+
+          }
+
+          .item_info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            @media (max-width: 620px)
+            {
+              width: 100%;
+            }
+
+            .name {
+              font-size: 18px;
+              color: $color-dark;
+              font-weight: 500;
+              text-transform: uppercase;
+            }
+
+            .amount {
+              font-size: 16px;
+              color: $color-dark-gray;
+            }
+          }
+        }
+
+
+  }
+}
+
+
+.similars_container {
+  display: flex;
+  justify-content: center;
+
+  .similars_info {
+    @include container();
+    flex-direction: column;
+    gap: 60px;
+
+    div {
+      display: flex;
+      justify-content: center;
+
+      h2 {
+        @include h2();
+      }
+    }
+
+    .similars{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .slider{
+        width: 100%;
+
+        .slick-list{
+          margin: 0 40px;
+        }
+        .slick-slide{
+          .item{
+            width: 96%;
+
+            @media (max-width: 1200px)
+            {
+              max-width: 90%;
+            }
+            @media (max-width: 800px)
+            {
+              max-width: 80%;
+            }
+
+
+            .button_container{
+              .button{
+                width: 170px;
+                img{
+                  display: inline;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include item_catalog ();
+      .item{
+        max-width: 380px;
+      }
+    }
+  }
+}

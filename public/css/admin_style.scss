@@ -1,0 +1,144 @@
+@import "constants";
+body{
+    background-color: #F2F2F5;
+}
+
+header{
+    .header_container{
+        .button{
+            @include main-button;
+            transition: all 0.2s;
+            border: none;
+        }
+        .button:hover {
+            color: #3498db;
+            cursor: pointer;
+        }
+    }
+}
+
+.h2_cont{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+    @include h2;
+    @media (max-width: 1230px)
+    {
+        font-size: 24px;
+    }
+}
+
+.admin_container{
+    display: flex;
+    flex-direction: row;
+    padding: 60px 0 30px 0;
+    margin: 0 8%;
+
+    @media (max-width: 1000px)
+    {
+        margin: 0 3%;
+    }
+
+    .tabs {
+        width: 100%;
+        float: none;
+        list-style: none;
+        padding: 0;
+    }
+
+    .tab {
+        overflow: hidden;
+        border: 1px solid $color-medium-gray;
+        background-color: $color-light-gray;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: $color-light-gray;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: $color-medium-gray;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid $color-light-gray;
+        border-top: none;
+
+        @media (max-width: 1000px)
+        {
+            padding: 6px 0;
+        }
+
+        .tab_cont{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px 60px;
+
+            @media (max-width: 1000px)
+            {
+                padding: 30px 0;
+            }
+
+            .item{
+                width: 100%;
+                background-color: $color-medium-gray;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px;
+
+                .row{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    color: $color-dark;
+
+                    p{
+                        font-size: 16px;
+                        width: 10%;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                    input{
+                        font-size: 16px;
+                        width: 70%;
+                        padding: 6px 9px;
+                        outline: none;
+                        border: none;
+                    }
+
+                    .button{
+                        margin-top: 15px;
+                        @include main-button;
+                        transition: all 0.2s;
+                        border: none;
+                    }
+                    .button:hover {
+                        color: #3498db;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+}

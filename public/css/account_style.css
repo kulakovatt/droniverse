@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Fira Code", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: unset;
+  border: none;
+}
+
+body {
+  background-color: #F2F2F5;
+}
+
+.reg_aut_container {
+  display: flex;
+  justify-content: flex-end;
+  background: url("./../images/dron-img-3.jpg");
+  background-position-y: -200px;
+  background-position-x: -200px;
+  background-size: cover;
+}
+@media (max-width: 1380px) {
+  .reg_aut_container {
+    background-position-y: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .reg_aut_container {
+    background: none;
+  }
+}
+.reg_aut_container .registration {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 200px 60px 60px;
+  background-color: #F2F2F5;
+}
+@media (max-width: 1000px) {
+  .reg_aut_container .registration {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+  }
+}
+@media (max-width: 490px) {
+  .reg_aut_container .registration {
+    width: 92%;
+    padding: 20px 0;
+    gap: 26px;
+  }
+}
+.reg_aut_container .registration h2 {
+  font-family: Unbounded;
+  color: #2E5CFE;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+@media (max-width: 490px) {
+  .reg_aut_container .registration h2 {
+    font-size: 24px;
+  }
+}
+.reg_aut_container .registration form .inputs_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 490px) {
+  .reg_aut_container .registration form .inputs_container {
+    gap: 14px;
+    align-items: center;
+  }
+}
+.reg_aut_container .registration form .inputs_container input {
+  width: 410px;
+  padding: 12px 10px;
+  background-color: #F2F2F5;
+  border: 2px solid #D9D9D9;
+  outline: none;
+  font-size: 18px;
+  font-family: "Fira Code";
+}
+@media (max-width: 490px) {
+  .reg_aut_container .registration form .inputs_container input {
+    width: 86%;
+  }
+}
+.reg_aut_container .registration form .inputs_container input.input_error {
+  border: 2px solid #D92828;
+}
+.reg_aut_container .registration form .inputs_container .password_cont {
+  width: 410px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #D9D9D9;
+}
+@media (max-width: 490px) {
+  .reg_aut_container .registration form .inputs_container .password_cont {
+    width: 86%;
+  }
+}
+.reg_aut_container .registration form .inputs_container .password_cont input {
+  width: 360px;
+  border: none;
+}
+.reg_aut_container .registration form .inputs_container .password_cont button {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reg_aut_container .registration form .inputs_container .password_cont button:hover {
+  cursor: pointer;
+}
+.reg_aut_container .registration form .inputs_container .password_cont button img {
+  width: 33px;
+}
+.reg_aut_container .registration form .inputs_container .password_strength {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+@media (max-width: 490px) {
+  .reg_aut_container .registration form .inputs_container .password_strength {
+    width: 86%;
+  }
+}
+.reg_aut_container .registration form .inputs_container .password_strength .color_line_cont {
+  width: 410px;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(215, 129, 129) 0%, rgb(213, 214, 173) 50%, rgb(164, 232, 141) 100%);
+  display: flex;
+  justify-content: flex-start;
+}
+@media (max-width: 490px) {
+  .reg_aut_container .registration form .inputs_container .password_strength .color_line_cont {
+    width: 100%;
+  }
+}
+.reg_aut_container .registration form .inputs_container .password_strength .color_line_cont .color_line-red {
+  width: 20%;
+  background-color: rgb(237, 11, 11);
+  border-right: 5px solid #626262;
+}
+.reg_aut_container .registration form .inputs_container .password_strength .color_line_cont .color_line-yellow {
+  width: 50%;
+  background: linear-gradient(90deg, rgb(237, 11, 11) 0%, rgb(221, 224, 63) 100%);
+  border-right: 5px solid #626262;
+}
+.reg_aut_container .registration form .inputs_container .password_strength .color_line_cont .color_line-green {
+  width: 100%;
+  background: linear-gradient(90deg, rgb(237, 11, 11) 0%, rgb(221, 224, 63) 50%, rgb(65, 196, 24) 100%);
+  border-right: 5px solid #626262;
+}
+.reg_aut_container .registration form .inputs_container .password_strength p {
+  font-weight: 500;
+}
+.reg_aut_container .registration form .inputs_container .password_strength p.message-red {
+  color: rgb(204, 61, 35);
+}
+.reg_aut_container .registration form .inputs_container .password_strength p.message-yellow {
+  color: rgb(215, 173, 38);
+}
+.reg_aut_container .registration form .inputs_container .password_strength p.message-green {
+  color: rgb(65, 196, 24);
+}
+.reg_aut_container .registration form .button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.reg_aut_container .registration form .button_container button {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ECE9E9;
+  padding: 8px 20px;
+  background-color: #2E5CFE;
+  border: 2px solid #2E5CFE;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (max-width: 1000px) {
+  .reg_aut_container .registration form .button_container button {
+    font-size: 16px;
+    padding: 6px 16px;
+  }
+}
+.reg_aut_container .registration form .button_container button:hover {
+  color: #2E5CFE;
+}
+.reg_aut_container .registration form .button_container button::after {
+  content: "";
+  background: #F2F2F5;
+  position: absolute;
+  z-index: -1;
+  padding: 8px 20px;
+  display: block;
+}
+.reg_aut_container .registration form .button_container button[class^=slide]::after {
+  transition: all 0.5s;
+}
+.reg_aut_container .registration form .button_container button[class^=slide]:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.5s;
+}
+.reg_aut_container .registration form .button_container button.slide_from_left::after {
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+}
+.reg_aut_container .registration .button_signin_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 490px) {
+  .reg_aut_container .registration .button_signin_container {
+    width: 86%;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.reg_aut_container .registration .button_signin_container p {
+  color: #1E1E1E;
+  font-weight: 500;
+  font-size: 16px;
+}
+.reg_aut_container .registration .button_signin_container a {
+  color: #2E5CFE;
+  font-size: 18px;
+  text-transform: lowercase;
+  font-weight: 500;
+  padding: 6px 20px;
+  border-bottom: 2px solid #2E5CFE;
+  font-size: 16px;
+  padding: 6px 10px;
+}
+
+li {
+    list-style: none; /* Скрываем маркеры списка */
+}
+li::before {
+    content: '\25ba'; /* Добавляем маркер в шестнадцатеричном формате*/
+    padding-right: 5px; /* Расстояние от маркеров до текста */
+    color: #2E5CFE; /* Маркеры красного цвета */
+}
+
+.inputs_container label {
+    width: 410px;
+    font-size: 14px;
+}
+
+.alert-danger {
+    width: 410px;
+}
+
+
+
+/*# sourceMappingURL=account_style.css.map */
+
